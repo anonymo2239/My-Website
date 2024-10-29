@@ -1,0 +1,176 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials - Adem Alperen Arda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #4e89ae;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ee6c4d;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            flex: 1;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .testimonial-content {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #3d405b;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #4e89ae;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .author-info {
+            flex: 1;
+        }
+
+        .author-name {
+            font-weight: bold;
+            color: #006d77;
+        }
+
+        .author-position {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .rating {
+            color: #ffd700;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #3d405b;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: #ffbf69;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Adem Alperen Arda</h1>
+        <nav>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'contact' %}">Contact</a>
+            <a href="{% url 'testimonials' %}">Testimonials</a>
+            <a href="{% url 'projects' %}">Projects</a>
+            <a href="{% url 'photos' %}">Photos</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <div class="rating">★★★★★</div>
+                <div class="testimonial-content">
+                    "It was a privilege to work with Alperen during my time as a software team lead in KOU Rover, where he consistently demonstrated a methodical and robust approach to his responsibilities. When faced with technical challenges, he consistently developed creative solutions that significantly contributed to the project's success."
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar">EB</div>
+                    <div class="author-info">
+                        <div class="author-name">Enes Birlik</div>
+                        <div class="author-position">Team Leader, KOU Rover</div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+
+    <footer>
+        © 2024 - Adem Alperen Arda - All rights reserved - 
+        <a href="{% url 'contact' %}">Contact</a>
+    </footer>
+</body>
+</html>

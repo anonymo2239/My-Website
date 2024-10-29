@@ -1,0 +1,187 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos - Adem Alperen Arda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #4e89ae;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ee6c4d;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            flex: 1;
+        }
+
+        .photos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .photo-card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            animation: fadeIn 0.5s ease-in-out;
+            overflow: hidden;
+        }
+
+        .photo-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .photo-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            aspect-ratio: 16/9;
+        }
+
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .photo-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .photo-title {
+            color: #006d77;
+            font-size: 20px;
+            margin: 15px 0 10px 0;
+        }
+
+        .photo-description {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #3d405b;
+            margin-bottom: 15px;
+        }
+
+        .photo-date {
+            color: #666;
+            font-size: 12px;
+            font-style: italic;
+        }
+
+        .category-tag {
+            background-color: #4e89ae;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        footer {
+            background-color: #3d405b;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: #ffbf69;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Adem Alperen Arda</h1>
+        <nav>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'contact' %}">Contact</a>
+            <a href="{% url 'testimonials' %}">Testimonials</a>
+            <a href="{% url 'projects' %}">Projects</a>
+            <a href="{% url 'photos' %}">Photos</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="photos-grid">
+            <div class="photo-card">
+                <div class="photo-container">
+                    <img src="{% static 'images/gdf.jpeg' %}" alt="Data Science Conference">
+                </div>
+                <h3 class="photo-title">Google DevFest2023</h3>
+                <p class="photo-description">
+                    At Google DevFest 2023, I gained valuable insights into data science and artificial intelligence. Learning about the latest trends, techniques and practical approaches in these fields.
+                </p>
+                <span class="category-tag">Conference</span>
+                <div class="photo-date">December 12, 2023</div>
+            </div>
+
+            <div class="photo-card">
+                <div class="photo-container">
+                    <img src="{% static 'images/bmw.jpg' %}" alt="Workshop">
+                </div>
+                <h3 class="photo-title">BMW Museum, Munchen/Germany</h3>
+                <p class="photo-description">
+                    I visited the BMW Museum in Germany where I learned a lot about engineering and explored BMW's history along with their latest AI projects.
+                </p>
+                <span class="category-tag">Technical Visit</span>
+                <div class="photo-date">July 14, 2024</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        © 2024 - Adem Alperen Arda - All rights reserved - 
+        <a href="{% url 'contact' %}">Contact</a>
+    </footer>
+</body>
+</html>

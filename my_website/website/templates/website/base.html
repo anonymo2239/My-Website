@@ -1,26 +1,27 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adem Alperen Arda - Data Scientist</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"> <!-- Poppins yazı tipi eklendi -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Poppins', sans-serif; /* Poppins yazı tipi kullanılıyor */
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f0f4f8;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            background-image: url('https://source.unsplash.com/featured/?modern,texture'); /* Modern bir arka plan görüntüsü */
+            background-image: url('https://source.unsplash.com/featured/?modern,texture');
             background-size: cover;
             background-position: center;
         }
 
         header {
-            background-color: rgba(78, 137, 174, 0.8); /* Arka plan yarı saydam yapıldı */
+            background-color: #4e89ae;
             padding: 20px;
             text-align: center;
             color: white;
@@ -50,7 +51,7 @@
             flex: 1;
             display: flex;
             align-items: center;
-            background-color: rgba(255, 255, 255, 0.9); /* Beyaz şeffaf bir arka plan */
+            background-color: rgba(255, 255, 255, 0.9);
             border-radius: 10px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
@@ -72,7 +73,7 @@
             margin: 20px 0;
         }
 
-        .content button {
+        .quick-contact-btn {
             background-color: #ee6c4d;
             color: white;
             border: none;
@@ -82,9 +83,11 @@
             border-radius: 5px;
             margin-right: 10px;
             transition: background-color 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
         }
 
-        .content button:hover {
+        .quick-contact-btn:hover {
             background-color: #006d77;
         }
 
@@ -106,7 +109,9 @@
             background-color: #3d405b;
             color: white;
             text-align: center;
-            padding: 10px;
+            padding: 15px;
+            width: 100%;
+            box-sizing: border-box;
             margin-top: auto;
         }
 
@@ -131,33 +136,31 @@
     </style>
 </head>
 <body>
-
     <header>
         <h1>Welcome to the personal website of Adem Alperen Arda</h1>
         <nav>
-            <a href="#">Home</a>
-            <a href="#">Contact</a>
-            <a href="#">Testimonials</a>
-            <a href="#">Projects</a>
-            <a href="#">Photos</a>
-            <a href="#">Blog</a>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'contact' %}">Contact</a>
+            <a href="{% url 'testimonials' %}">Testimonials</a>
+            <a href="{% url 'projects' %}">Projects</a>
+            <a href="{% url 'photos' %}">Photos</a>
         </nav>
     </header>
 
     <div class="container">
         <div class="content">
             <h1>Who am I?</h1>
-            <p>I am Adem Alperen Arda. I am a Data Scientist working in the realty sector. My current focus is predictive analytics. If you want to learn more about me, you are at the right place.</p>
-            <button>Quick Contact</button>
+            <p>I'm Adem Alperen Arda. I am a Computer Science student, currently taking steps to advance my skills in data science and computer science. My primary focus areas are data analytics, predictive analytics and software development. If you want to learn more about me, you're in the right place.</p>
+            <a href="{% url 'contact' %}" class="quick-contact-btn">Quick Contact</a>
         </div>
         <div class="image">
-            <img src="C:\Users\Alperen Arda\OneDrive\Desktop\GitHub\My-Website\my_website\images\resim1.png" alt="alperen">
+            <img src="{% static './images/resim1.png' %}" alt="alperen">
         </div>
     </div>
     
     <footer>
-        © 2024 - Adem Alperen Arda - All rights reserved - <a href="mailto:alperen.arda.adem22@gmail.com">Contact</a>
+        © 2024 - Adem Alperen Arda - All rights reserved - 
+        <a href="{% url 'contact' %}">Contact</a>
     </footer>
-
 </body>
 </html>

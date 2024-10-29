@@ -54,7 +54,7 @@ ROOT_URLCONF = 'my_website.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'website' / 'templates'],  # Template dizinini burada belirtiyoruz
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -116,6 +116,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+# Eklenecek yeni ayarlar
+STATICFILES_DIRS = [
+    BASE_DIR / "static",  # Proje ana dizinindeki static klasörü
+]
+
+# Production ortamında static dosyaların toplanacağı dizin
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

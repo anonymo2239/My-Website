@@ -1,0 +1,193 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Adem Alperen Arda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #4e89ae;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ee6c4d;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            flex: 1;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .project-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-title {
+            color: #006d77;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .project-description {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #3d405b;
+            margin-bottom: 20px;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tech-tag {
+            background-color: #4e89ae;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 14px;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .project-link {
+            background-color: #ee6c4d;
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .project-link:hover {
+            background-color: #006d77;
+        }
+
+        footer {
+            background-color: #3d405b;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: #ffbf69;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Adem Alperen Arda</h1>
+        <nav>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'contact' %}">Contact</a>
+            <a href="{% url 'testimonials' %}">Testimonials</a>
+            <a href="{% url 'projects' %}">Projects</a>
+            <a href="{% url 'photos' %}">Photos</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="projects-grid">
+            <div class="project-card">
+                <h2 class="project-title">Graphical User Interface for KOU Rover AGV</h2>
+                <p class="project-description">
+                    I contributed
+                    to the autonomous AGV project with interface design and
+                    data visualization. Our team won first place at Teknofest
+                    SDT.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">ROS2</span>
+                    <span class="tech-tag">Qt</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/anonymo2239/KOU-Rover-User-Interface-Qt/tree/master" class="project-link">GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h2 class="project-title">This Website</h2>
+                <p class="project-description">
+                    I developed a personal website to showcase my portfolio, making it easy to present my work and projects in one place. This site highlights my skills, experiences, and growth as I continue advancing in data science and software development.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Django</span>
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/anonymo2239/My-Website" class="project-link">GitHub</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        © 2024 - Adem Alperen Arda - All rights reserved - 
+        <a href="{% url 'contact' %}">Contact</a>
+    </footer>
+</body>
+</html>
