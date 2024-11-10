@@ -1,10 +1,11 @@
-{% load static %}
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adem Alperen Arda - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -26,114 +27,11 @@
             color: white;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* Contact Section */
-        .contact {
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            border-radius: 12px;
-            margin-bottom: 20px;
-        }
-
-        .section-title {
-            font-size: 26px;
-            margin-bottom: 10px;
-            color: #4e89ae;
-        }
-
-        .contact-info {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-
-        .contact-info div {
-            margin-bottom: 12px;
-        }
-
-        .contact-info a {
-            color: #4e89ae;
-            text-decoration: none;
-        }
-
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-
-        .skills {
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            border-radius: 12px;
-        }
-
-        .skills ul {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        .skills ul li {
-            font-size: 18px;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            width: calc(50% - 10px);
-        }
-
-        .skills ul li::before {
-            content: '✔️';
-            margin-right: 10px;
-            color: #4e89ae;
-        }
-
-        .skills ul li a {
-            margin-left: 10px;
-            color: #007BFF;
-            text-decoration: none;
-        }
-
-        .skills ul li a:hover {
-            text-decoration: underline;
-        }
-
-        .social-media img, .business-pages img {
-            margin-right: 10px;
-            width: 40px;
-            height: 40px;
-        }
-
-        .social-media a, .business-pages a {
-            text-decoration: none;
-        }
-
-        footer {
-            background-color: #4e89ae;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-        }
-
-        footer a {
-            color: #ffbf69;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
         nav {
             display: flex;
             justify-content: center;
             gap: 40px;
+            margin-top: 15px;
         }
 
         nav a {
@@ -146,10 +44,143 @@
         nav a:hover {
             color: #ee6c4d;
         }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            flex: 1;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .section {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            margin-bottom: 25px;
+            animation: slideIn 1.5s ease-in-out;
+        }
+
+        .section-title {
+            font-size: 26px;
+            color: #006d77;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            list-style: none;
+            padding: 0;
+        }
+
+        .contact-info li {
+            font-size: 18px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info a {
+            color: #4e89ae;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #ee6c4d;
+            text-decoration: underline;
+        }
+
+        .skills ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .skills li {
+            flex: 1 1 calc(50% - 20px);
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .skills li::before {
+            content: '✔️';
+            margin-right: 10px;
+            color: #4e89ae;
+        }
+
+        .business-pages, .social-media {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .business-pages div, .social-media div {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .business-pages img, .social-media img {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        .business-pages img:hover, .social-media img:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            background-color: #4e89ae;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: #ffbf69;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+            color: #ee6c4d;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .skills li {
+                flex: 1 1 100%;
+            }
+
+            .container {
+                padding: 10px;
+            }
+        }
     </style>
 </head>
 <body>
-
     <header>
         <h1>Adem Alperen Arda</h1>
         <nav>
@@ -162,18 +193,16 @@
     </header>
 
     <div class="container">
-        <!-- Contact Section -->
-        <div class="contact">
+        <div class="section contact">
             <h2 class="section-title">Contact Information</h2>
             <ul class="contact-info">
                 <li>📧 <a href="mailto:alperen.arda.adem22@gmail.com?subject=Hello%20World&body=I%20just%20wanted%20to%20say%20hi!">alperen.arda.adem22@gmail.com</a></li>
                 <li>📍 Izmit/Kocaeli, Türkiye</li>
-                <li>Contact Me For My Resume</a></li>
+                <li>📄 <a href="{% static 'files/AdemAlperenArdaCV.pdf' %}" target="_blank">Contact Me For My Resume</a></li>
             </ul>
         </div>
 
-        <!-- Skills Section -->
-        <div class="skills">
+        <div class="section skills">
             <h2 class="section-title">My Skills</h2>
             <ul>
                 <li>Data Science (All Certificates) <a href="link_to_certificate_1" target="_blank">View Certificate</a></li>
@@ -183,11 +212,10 @@
                 <li>Computer Vision <a href="link_to_certificate_5" target="_blank">View Certificate</a></li>
                 <li>Statistics & Mathematics <a href="link_to_certificate_4" target="_blank">View Certificate</a></li>
             </ul>
-            <p>You can take a look at my <a href="link_to_your_projects">projects</a>, which are more important than the certificates!</p>
+            <p>You can take a look at my <a href="https://github.com/anonymo2239">projects</a>, which are more important than the certificates!</p>
         </div>
         
-        <!-- Business Pages Section -->
-        <div class="business-pages">
+        <div class="section business-pages">
             <h2 class="section-title">Business Pages</h2>
             <div>
                 <a href="https://www.linkedin.com/in/adem-alperen-arda-6b9879258/" target="_blank">
@@ -205,8 +233,7 @@
             </div>
         </div>
 
-        <!-- Social Media Section -->
-        <div class="social-media">
+        <div class="section social-media">
             <h2 class="section-title">Social Media</h2>
             <div>
                 <a href="https://www.instagram.com/aalperen.arda/" target="_blank">
@@ -220,12 +247,10 @@
                 </a>
             </div>
         </div>
-
     </div>
 
     <footer>
         <p>© 2024 - Adem Alperen Arda - All rights reserved | <a href="mailto:alperen.arda.adem22@gmail.com?subject=Portfolio%20Contact&body=Hello%20Adem%2C%20">Contact Me</a></p>
     </footer>
-
 </body>
 </html>
