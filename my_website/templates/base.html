@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adem Alperen Arda - Data Scientist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"> <!-- Poppins yazı tipi eklendi -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif; /* Poppins yazı tipi kullanılıyor */
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-image: url('https://source.unsplash.com/featured/?modern,texture'); /* Modern bir arka plan görüntüsü */
+            background-size: cover;
+            background-position: center;
+        }
+
+        header {
+            background-color: rgba(78, 137, 174, 0.8); /* Arka plan yarı saydam yapıldı */
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ee6c4d;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.9); /* Beyaz şeffaf bir arka plan */
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .content {
+            flex: 1;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .content h1 {
+            color: #006d77;
+            font-size: 55px;
+            margin: 0;
+        }
+
+        .content p {
+            font-size: 20px;
+            color: #3d405b;
+            margin: 20px 0;
+        }
+
+        .content button {
+            background-color: #ee6c4d;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .content button:hover {
+            background-color: #006d77;
+        }
+
+        .image {
+            flex: 1;
+            text-align: center;
+            animation: slideIn 1.5s ease-in-out;
+        }
+
+        .image img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+            border: 5px solid #4e89ae;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background-color: #3d405b;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: #ffbf69;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(100px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to the personal website of Adem Alperen Arda</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Contact</a>
+            <a href="#">Testimonials</a>
+            <a href="#">Projects</a>
+            <a href="#">Photos</a>
+            <a href="#">Blog</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <h1>Who am I?</h1>
+            <p>I am Adem Alperen Arda. I am a Data Scientist working in the realty sector. My current focus is predictive analytics. If you want to learn more about me, you are at the right place.</p>
+            <button>Quick Contact</button>
+        </div>
+        <div class="image">
+            <img src="C:\Users\Alperen Arda\OneDrive\Desktop\GitHub\My-Website\my_website\images\resim1.png" alt="alperen">
+        </div>
+    </div>
+    
+    <footer>
+        © 2024 - Adem Alperen Arda - All rights reserved - <a href="mailto:alperen.arda.adem22@gmail.com">Contact</a>
+    </footer>
+
+</body>
+</html>
