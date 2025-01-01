@@ -1,10 +1,13 @@
-# www.ademalperenarda.com - The Personal Website of Adem Alperen Arda
+# The Personal Website of Adem Alperen Arda - www.ademalperenarda.com
 
 This repository contains the code for my personal website, where I showcase my portfolio, skills, projects and professional achievements.
+
 ---
 ![](readme_images/1.png)
+
 *Main Page*
 ---
+
 ## 🌟 About
 
 I am Adem Alperen Arda, a Computer Science student working on about **Data Science**, **Software Development**, and **Predictive Analytics**. This website serves as a platform to present my work, skills and certifications as I advance in my career.
