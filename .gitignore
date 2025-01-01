@@ -18,3 +18,5 @@ staticfiles/
 
 # Log files
 *.log
+
+README.private.md
