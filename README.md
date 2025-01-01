@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/e4a57736-b874-484a-a5f9-6d593352cf86)# Adem Alperen Arda - Personal Website
+# www.ademalperenarda.com - The Personal Website of Adem Alperen Arda
 
 This repository contains the code for my personal website, where I showcase my portfolio, skills, projects and professional achievements.
 ---
@@ -21,6 +21,7 @@ I am Adem Alperen Arda, a Computer Science student working on about **Data Scien
 - **Frontend**: HTML, CSS
 - **Backend**: Django (Python)
 
+---
 ## Photos
 
 ![](readme_images/2.png)
@@ -37,6 +38,7 @@ I am Adem Alperen Arda, a Computer Science student working on about **Data Scien
 
 ![](readme_images/6.png)
 *Photos page where I sometimes share my technical trips or conferences.*
+---
 
 ## 📜 License
 
