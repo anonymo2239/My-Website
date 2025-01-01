@@ -1,0 +1,20 @@
+# Environment files
+.env
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Database files
+db.sqlite3
+
+# Static files
+staticfiles/
+
+# IDE & Editor files
+.vscode/
+.idea/
+
+# Log files
+*.log
