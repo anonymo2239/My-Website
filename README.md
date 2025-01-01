@@ -4,8 +4,8 @@ This repository contains the code for my personal website, where I showcase my p
 
 ---
 ![](readme_images/1.png)
-
 *Main Page*
+
 ---
 
 ## 🌟 About
@@ -25,6 +25,7 @@ I am Adem Alperen Arda, a Computer Science student working on about **Data Scien
 - **Backend**: Django (Python)
 
 ---
+
 ## Photos
 
 ![](readme_images/2.png)
@@ -41,6 +42,7 @@ I am Adem Alperen Arda, a Computer Science student working on about **Data Scien
 
 ![](readme_images/6.png)
 *Photos page where I sometimes share my technical trips or conferences.*
+
 ---
 
 ## 📜 License
