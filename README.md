@@ -1,10 +1,10 @@
 # Adem Alperen Arda - Personal Website
 
-This repository contains the code for my personal website, where I showcase my portfolio, skills, projects, and professional achievements.
+This repository contains the code for my personal website, where I showcase my portfolio, skills, projects and professional achievements.
 
 ## 🌟 About
 
-I am Adem Alperen Arda, a Computer Science student passionate about **Data Science**, **Software Development**, and **Predictive Analytics**. This website serves as a platform to present my work, skills, and certifications as I advance in my career.
+I am Adem Alperen Arda, a Computer Science student working on about **Data Science**, **Software Development**, and **Predictive Analytics**. This website serves as a platform to present my work, skills and certifications as I advance in my career.
 
 ### Features:
 - **Who Am I?**: A brief introduction about me and my areas of expertise.
