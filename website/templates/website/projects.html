@@ -50,42 +50,61 @@
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(2, 1fr); /* Her satırda 2 kart */
             gap: 30px;
             margin-top: 40px;
         }
 
         .project-card {
             background: white;
-            padding: 30px;
+            padding: 20px;
             border-radius: 15px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
             animation: fadeIn 0.5s ease-in-out;
+            overflow: hidden;
         }
 
         .project-card:hover {
             transform: translateY(-5px);
         }
 
+        .project-image-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            aspect-ratio: 16/9;
+        }
+
+        .project-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover img {
+            transform: scale(1.05);
+        }
+
         .project-title {
             color: #006d77;
-            font-size: 24px;
-            margin-bottom: 15px;
+            font-size: 20px;
+            margin: 15px 0 10px 0;
         }
 
         .project-description {
-            font-size: 16px;
+            font-size: 14px;
             line-height: 1.6;
             color: #3d405b;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .project-tech {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-            margin-bottom: 20px;
+            margin-top: 10px;
         }
 
         .tech-tag {
@@ -93,12 +112,11 @@
             color: white;
             padding: 5px 10px;
             border-radius: 15px;
-            font-size: 14px;
+            font-size: 12px;
         }
 
         .project-links {
-            display: flex;
-            gap: 15px;
+            margin-top: 10px;
         }
 
         .project-link {
@@ -152,12 +170,16 @@
     <div class="container">
         <div class="projects-grid">
             <div class="project-card">
-                <h2 class="project-title">Graphical User Interface for KOU Rover AGV</h2>
+                <div class="project-image-container">
+                    <img src="{% static 'images/projects9.jpg' %}" alt="Project Screenshot">
+                </div>
+                <h3 class="project-title">Graphical User Interface for KOU Rover AGV</h3>
                 <p class="project-description">
-                    I contributed
-                    to the autonomous AGV project with interface design and
-                    data visualization. Our team won first place at Teknofest
-                    SDT.</p>
+                    I contributed to the autonomous AGV project while working with the KOU Rover team, 
+                    focusing on interface design and data visualization. I used Qt, ROS2, Python and threading. 
+                    Our team worked very hard for one year, and this project helped me improve my teamwork skills. 
+                    Winning first place at TEKNOFEST SDT was a great reward for our efforts.
+                </p>
                 <div class="project-tech">
                     <span class="tech-tag">Python</span>
                     <span class="tech-tag">ROS2</span>
@@ -169,9 +191,142 @@
             </div>
 
             <div class="project-card">
-                <h2 class="project-title">This Website</h2>
+                <div class="project-image-container">
+                    <img src="{% static 'images/projects2.png' %}" alt="Project Screenshot">
+                </div>
+                <h3 class="project-title">Kaggle Competition</h3>
                 <p class="project-description">
-                    I developed a personal website to showcase my portfolio, making it easy to present my work and projects in one place. This site highlights my skills, experiences, and growth as I continue advancing in data science and software development.</p>
+                    I participated in the Loan Approval Prediction competition on Kaggle. 
+                    I used numpy, pandas, scikit-learn, and xgboost libraries. My model achieved an accuracy of 87.33%. 
+                    This competition helped me improve my machine learning and data analysis skills.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">Numpy</span>
+                    <span class="tech-tag">Pandas</span>
+                    <span class="tech-tag">Sklearn</span>
+                    <span class="tech-tag">XGBoost</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://www.kaggle.com/code/alperenarda/notebook9d1946f596?scriptVersionId=200602250" class="project-link">Kaggle</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image-container">
+                    <img src="{% static 'images/projects4.png' %}" alt="Project Screenshot">
+                </div>
+                <h3 class="project-title">Stock Management Web Application</h3>
+                <p class="project-description">
+                    This stock app is like amazon.com but contains thread logic in admin panel. 
+                    This project was developed collaboratively by two contributors (@Simsekomer on GitHub and myself) 
+                    using Django Framework and MSSQL.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">MS SQL</span>
+                    <span class="tech-tag">Django</span>
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/anonymo2239/Stock-Management-Web-Application" class="project-link">GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image-container">
+                    <img src="{% static 'images/projects5.png' %}" alt="Project Screenshot">
+                </div>
+                <h3 class="project-title">My Data Science Notebook</h3>
+                <p class="project-description">
+                    A collection of data science projects and exercises I worked on during my learning journey. 
+                    This includes examples of machine learning algorithms, data preprocessing and exploratory 
+                    data analysis using Python. It features practical examples from Kaggle competitions, data visualization 
+                    tasks, and basic concepts in NumPy and Pandas.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Numpy</span>
+                    <span class="tech-tag">Pandas</span>
+                    <span class="tech-tag">Seaborn</span>
+                    <span class="tech-tag">Statistic Notes</span>
+                    <span class="tech-tag">Probability Notes</span>
+                    <span class="tech-tag">Machine Learning Libraries</span>
+                    <span class="tech-tag">Big Data</span>
+                    <span class="tech-tag">Data Scraping/Mining</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/anonymo2239/Data-Science-and-Machine-Learning-Tutorial" class="project-link">GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image-container">
+                    <img src="{% static 'images/projects6.png' %}" alt="Project Screenshot">
+                </div>
+                <h3 class="project-title">Domain Collector</h3>
+                <p class="project-description">
+                    An automated web scraping tool that finds and collects valuable domain names, 
+                    focusing on those worth over $150 from expireddomains.com. Built with Selenium, 
+                    it simplifies the process by analyzing metrics and market data. Ideal for domain investors and 
+                    researchers looking for profitable opportunities.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Selenium</span>
+                    <span class="tech-tag">Data Scraping/Mining</span>
+                    <span class="tech-tag">Domain</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/anonymo2239/Domain-Collector-with-Selenium" class="project-link">GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image-container">
+                    <img src="{% static 'images/projects7.png' %}" alt="Project Screenshot">
+                </div>
+                <h3 class="project-title">Recipe Guide Desktop Application</h3>
+                <p class="project-description">
+                    This project is a Recipe App designed to manage recipes, including adding, editing and listing recipes. 
+                    This project was developed collaboratively by two contributors (@Simsekomer on GitHub and myself) using C# and MSSQL.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">C#</span>
+                    <span class="tech-tag">MS SQL</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/anonymo2239/Recipe-Guide-Application-with-SQL-Data-Analysis-2" class="project-link">GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image-container">
+                    <img src="{% static 'images/projects8.png' %}" alt="Project Screenshot">
+                </div>
+                <h3 class="project-title">The document I prepared: Interface Design and Data Transfer with PyQt6 and ROS2</h3>
+                <p class="project-description">
+                    I prepared documentation titled 'Designing an Interface with PYQT 6 and Data Transfer with ROS.' 
+                    This project reflects the skills and experience I gained over one year of working intensively with
+                     Python, PyQt6 and ROS2, focusing on interface design and efficient data transfer methods.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">For reading, please click button below.</span>
+                </div>
+                <div class="project-links">
+                    <a href="{% static 'files/document_rover.pdf' %}" class="project-link">Document</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image-container">
+                    <img src="{% static 'images/projects.png' %}" alt="Project Screenshot">
+                </div>
+                <h3 class="project-title">This Website</h3>
+                <p class="project-description">
+                    I developed a personal website to showcase my portfolio, making 
+                    it easy to present my work and projects in one place. This site highlights my skills,
+                    experiences, and growth as I continue advancing in data science and software development.
+                </p>
                 <div class="project-tech">
                     <span class="tech-tag">Django</span>
                     <span class="tech-tag">HTML</span>

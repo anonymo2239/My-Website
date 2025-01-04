@@ -50,7 +50,7 @@
 
         .photos-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 30px;
             margin-top: 40px;
         }
@@ -153,16 +153,29 @@
 
     <div class="container">
         <div class="photos-grid">
+
             <div class="photo-card">
                 <div class="photo-container">
-                    <img src="{% static 'images/gdf.jpeg' %}" alt="Data Science Conference">
+                    <img src="{% static 'images/yey.jpg' %}" alt="Workshop">
                 </div>
-                <h3 class="photo-title">Google DevFest2023</h3>
+                <h3 class="photo-title">TEKNOFEST 2024, Şakirpaşa Havalimanı/Adana</h3>
                 <p class="photo-description">
-                    At Google DevFest 2023, I gained valuable insights into data science and artificial intelligence. Learning about the latest trends, techniques and practical approaches in these fields.
+                    Our team won first place in the Teknofest 2024 Digital Technologies in Industry competition and proudly showcased our project in the Champions League finals.
                 </p>
-                <span class="category-tag">Conference</span>
-                <div class="photo-date">December 12, 2023</div>
+                <span class="category-tag">Winner winner chicken dinner</span>
+                <div class="photo-date">October 4, 2024</div>
+            </div>
+
+            <div class="photo-card">
+                <div class="photo-container">
+                    <img src="{% static 'images/agv.jpg' %}" alt="Workshop">
+                </div>
+                <h3 class="photo-title">TEKNOFEST 2024, Şakirpaşa Havalimanı/Adana</h3>
+                <p class="photo-description">
+                    Our AGV Vehicle
+                </p>
+                <span class="category-tag">Vehicle</span>
+                <div class="photo-date">October 3, 2024</div>
             </div>
 
             <div class="photo-card">
@@ -176,6 +189,31 @@
                 <span class="category-tag">Technical Visit</span>
                 <div class="photo-date">July 14, 2024</div>
             </div>
+
+            <div class="photo-card">
+                <div class="photo-container">
+                    <img src="{% static 'images/bogazici.jpg' %}" alt="Workshop">
+                </div>
+                <h3 class="photo-title">Data Camp, Boğaziçi University</h3>
+                <p class="photo-description">
+                    I attended Boğaziçi DataCamp'23, where I explored data science topics. It was a great opportunity to learn and connect with others in the field.
+                </p>
+                <span class="category-tag">Data Camp</span>
+                <div class="photo-date">November 5, 2023</div>
+            </div>
+
+            <div class="photo-card">
+                <div class="photo-container">
+                    <img src="{% static 'images/gdf.jpeg' %}" alt="Data Science Conference">
+                </div>
+                <h3 class="photo-title">Google DevFest2023</h3>
+                <p class="photo-description">
+                    At Google DevFest 2023, I gained valuable insights into data science and artificial intelligence. Learning about the latest trends, techniques and practical approaches in these fields.
+                </p>
+                <span class="category-tag">Conference</span>
+                <div class="photo-date">November 4, 2023</div>
+            </div>
+    
         </div>
     </div>
 
